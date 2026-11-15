@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "concurrently \"ng serve\" \"npx json-server --watch db.json --port 3000\"",
     "build": "ng build",
     "watch": "ng build --watch --configuration development"
   },
@@ -24,6 +24,7 @@
     "@angular/cli": "^22.2.0-next",
     "@angular/compiler-cli": "^22.2.0-next",
     "@types/node": "^16.11.35",
+    "concurrently": "^10.0.7",
     "typescript": "~6.0.3"
   }
 }
